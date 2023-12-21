@@ -74,7 +74,7 @@ function changeWidth() {
 //Download Image
 function downloadImg() {
   domtoimage
-    .toPng(document.getElementById("outerBox"))
+    .toPng(document.getElementById("outerBox"),{quality: 2})
     .then(function (dataUrl) {
       var link = document.createElement("a");
       link.download = "img-shot.png";
