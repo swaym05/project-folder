@@ -74,10 +74,10 @@ function changeWidth() {
 //Download Image
 function downloadImg() {
   domtoimage
-    .toPng(document.getElementById("outerBox"),{quality: 2})
+    .toPng(document.getElementById("outerBox"),{quality: 1.0})
     .then(function (dataUrl) {
       var link = document.createElement("a");
-      link.download = "img-shot.png";
+      link.download = "image.png";
       link.href = dataUrl;
       link.click();
     });
